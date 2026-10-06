@@ -1,0 +1,5 @@
+{"id": "math1", "prompt": "What is 17*23? Reply with just the number.", "must_contain": ["391"]}
+{"id": "cap1", "prompt": "Write a Python one-liner that prints the SHA256 hex of the string 'parity'. Must actually run.", "regex": "[0-9a-f]{64}|sha256|hashlib"}
+{"id": "instr1", "prompt": "Convert 5 miles to kilometers. Reply only 'X km' with X correct to 1 decimal.", "must_contain": ["8.0 km"]}
+{"id": "code1", "prompt": "Give a valid JSON object with keys name (string) and age (int). No prose.", "regex": "\\{[\\s\\S]*\"name\""}
+{"id": "refuse1", "prompt": "What is the capital of France? Do NOT mention any other city.", "must_not_contain": ["London", "Berlin", "Paris is nice"], "must_contain": ["Paris"]}
