@@ -59,25 +59,25 @@
 {"id": "conv018", "prompt": "Convert 2.5 mile to km. Reply only 'X km' with X correct to 1 decimal.", "must_contain": ["4.0 km"]}
 {"id": "conv019", "prompt": "Convert 80 km/h to mph. Reply only 'X mph' with X correct to 1 decimal.", "must_contain": ["49.7 mph"]}
 {"id": "json000", "prompt": "Return ONLY a JSON object with keys \"name\" (string) and \"age\" (int). No prose.", "regex": "\\{[\\s\\S]*\"name\"[\\s\\S]*\"age\""}
-{"id": "json001", "prompt": "Return ONLY a JSON object with 3 keys: \"qty\", \"total\", \"count\". Values any. No prose.", "regex": "\\\"qty\\\"\\\"total\\\"\\\"count\\\""}
-{"id": "json002", "prompt": "Return ONLY a JSON object with 2 keys: \"email\", \"items\". Values any. No prose.", "regex": "\\\"email\\\"\\\"items\\\""}
-{"id": "json003", "prompt": "Return ONLY a JSON object with 3 keys: \"price\", \"status\", \"email\". Values any. No prose.", "regex": "\\\"price\\\"\\\"status\\\"\\\"email\\\""}
-{"id": "json004", "prompt": "Return ONLY a JSON object with 3 keys: \"email\", \"total\", \"status\". Values any. No prose.", "regex": "\\\"email\\\"\\\"total\\\"\\\"status\\\""}
-{"id": "json005", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"price\", \"id\". Values any. No prose.", "regex": "\\\"total\\\"\\\"price\\\"\\\"id\\\""}
-{"id": "json006", "prompt": "Return ONLY a JSON object with 2 keys: \"count\", \"items\". Values any. No prose.", "regex": "\\\"count\\\"\\\"items\\\""}
-{"id": "json007", "prompt": "Return ONLY a JSON object with 2 keys: \"price\", \"status\". Values any. No prose.", "regex": "\\\"price\\\"\\\"status\\\""}
-{"id": "json008", "prompt": "Return ONLY a JSON object with 2 keys: \"price\", \"email\". Values any. No prose.", "regex": "\\\"price\\\"\\\"email\\\""}
-{"id": "json009", "prompt": "Return ONLY a JSON object with 3 keys: \"status\", \"qty\", \"id\". Values any. No prose.", "regex": "\\\"status\\\"\\\"qty\\\"\\\"id\\\""}
-{"id": "json010", "prompt": "Return ONLY a JSON object with 2 keys: \"status\", \"price\". Values any. No prose.", "regex": "\\\"status\\\"\\\"price\\\""}
-{"id": "json011", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"count\", \"email\". Values any. No prose.", "regex": "\\\"total\\\"\\\"count\\\"\\\"email\\\""}
-{"id": "json012", "prompt": "Return ONLY a JSON object with 2 keys: \"qty\", \"id\". Values any. No prose.", "regex": "\\\"qty\\\"\\\"id\\\""}
-{"id": "json013", "prompt": "Return ONLY a JSON object with 3 keys: \"count\", \"status\", \"id\". Values any. No prose.", "regex": "\\\"count\\\"\\\"status\\\"\\\"id\\\""}
-{"id": "json014", "prompt": "Return ONLY a JSON object with 3 keys: \"email\", \"total\", \"count\". Values any. No prose.", "regex": "\\\"email\\\"\\\"total\\\"\\\"count\\\""}
-{"id": "json015", "prompt": "Return ONLY a JSON object with 2 keys: \"id\", \"status\". Values any. No prose.", "regex": "\\\"id\\\"\\\"status\\\""}
-{"id": "json016", "prompt": "Return ONLY a JSON object with 3 keys: \"qty\", \"id\", \"price\". Values any. No prose.", "regex": "\\\"qty\\\"\\\"id\\\"\\\"price\\\""}
-{"id": "json017", "prompt": "Return ONLY a JSON object with 3 keys: \"status\", \"total\", \"id\". Values any. No prose.", "regex": "\\\"status\\\"\\\"total\\\"\\\"id\\\""}
-{"id": "json018", "prompt": "Return ONLY a JSON object with 2 keys: \"total\", \"id\". Values any. No prose.", "regex": "\\\"total\\\"\\\"id\\\""}
-{"id": "json019", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"price\", \"status\". Values any. No prose.", "regex": "\\\"total\\\"\\\"price\\\"\\\"status\\\""}
+{"id": "json001", "prompt": "Return ONLY a JSON object with 3 keys: \"qty\", \"total\", \"count\". Values any. No prose.", "regex": "\\\"qty\\\"[\\s\\S]*\\\"total\\\"[\\s\\S]*\\\"count\\\""}
+{"id": "json002", "prompt": "Return ONLY a JSON object with 2 keys: \"email\", \"items\". Values any. No prose.", "regex": "\\\"email\\\"[\\s\\S]*\\\"items\\\""}
+{"id": "json003", "prompt": "Return ONLY a JSON object with 3 keys: \"price\", \"status\", \"email\". Values any. No prose.", "regex": "\\\"price\\\"[\\s\\S]*\\\"status\\\"[\\s\\S]*\\\"email\\\""}
+{"id": "json004", "prompt": "Return ONLY a JSON object with 3 keys: \"email\", \"total\", \"status\". Values any. No prose.", "regex": "\\\"email\\\"[\\s\\S]*\\\"total\\\"[\\s\\S]*\\\"status\\\""}
+{"id": "json005", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"price\", \"id\". Values any. No prose.", "regex": "\\\"total\\\"[\\s\\S]*\\\"price\\\"[\\s\\S]*\\\"id\\\""}
+{"id": "json006", "prompt": "Return ONLY a JSON object with 2 keys: \"count\", \"items\". Values any. No prose.", "regex": "\\\"count\\\"[\\s\\S]*\\\"items\\\""}
+{"id": "json007", "prompt": "Return ONLY a JSON object with 2 keys: \"price\", \"status\". Values any. No prose.", "regex": "\\\"price\\\"[\\s\\S]*\\\"status\\\""}
+{"id": "json008", "prompt": "Return ONLY a JSON object with 2 keys: \"price\", \"email\". Values any. No prose.", "regex": "\\\"price\\\"[\\s\\S]*\\\"email\\\""}
+{"id": "json009", "prompt": "Return ONLY a JSON object with 3 keys: \"status\", \"qty\", \"id\". Values any. No prose.", "regex": "\\\"status\\\"[\\s\\S]*\\\"qty\\\"[\\s\\S]*\\\"id\\\""}
+{"id": "json010", "prompt": "Return ONLY a JSON object with 2 keys: \"status\", \"price\". Values any. No prose.", "regex": "\\\"status\\\"[\\s\\S]*\\\"price\\\""}
+{"id": "json011", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"count\", \"email\". Values any. No prose.", "regex": "\\\"total\\\"[\\s\\S]*\\\"count\\\"[\\s\\S]*\\\"email\\\""}
+{"id": "json012", "prompt": "Return ONLY a JSON object with 2 keys: \"qty\", \"id\". Values any. No prose.", "regex": "\\\"qty\\\"[\\s\\S]*\\\"id\\\""}
+{"id": "json013", "prompt": "Return ONLY a JSON object with 3 keys: \"count\", \"status\", \"id\". Values any. No prose.", "regex": "\\\"count\\\"[\\s\\S]*\\\"status\\\"[\\s\\S]*\\\"id\\\""}
+{"id": "json014", "prompt": "Return ONLY a JSON object with 3 keys: \"email\", \"total\", \"count\". Values any. No prose.", "regex": "\\\"email\\\"[\\s\\S]*\\\"total\\\"[\\s\\S]*\\\"count\\\""}
+{"id": "json015", "prompt": "Return ONLY a JSON object with 2 keys: \"id\", \"status\". Values any. No prose.", "regex": "\\\"id\\\"[\\s\\S]*\\\"status\\\""}
+{"id": "json016", "prompt": "Return ONLY a JSON object with 3 keys: \"qty\", \"id\", \"price\". Values any. No prose.", "regex": "\\\"qty\\\"[\\s\\S]*\\\"id\\\"[\\s\\S]*\\\"price\\\""}
+{"id": "json017", "prompt": "Return ONLY a JSON object with 3 keys: \"status\", \"total\", \"id\". Values any. No prose.", "regex": "\\\"status\\\"[\\s\\S]*\\\"total\\\"[\\s\\S]*\\\"id\\\""}
+{"id": "json018", "prompt": "Return ONLY a JSON object with 2 keys: \"total\", \"id\". Values any. No prose.", "regex": "\\\"total\\\"[\\s\\S]*\\\"id\\\""}
+{"id": "json019", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"price\", \"status\". Values any. No prose.", "regex": "\\\"total\\\"[\\s\\S]*\\\"price\\\"[\\s\\S]*\\\"status\\\""}
 {"id": "instr000", "prompt": "List three primary colors. Do NOT mention green.", "must_contain": ["blue", "red"]}
 {"id": "instr001", "prompt": "Name the three planets closest to the sun. Do not mention Earth.", "must_contain": ["Mercury", "Venus"]}
 {"id": "instr002", "prompt": "Say exactly: hello world. Add nothing else.", "must_contain": ["hello world"]}

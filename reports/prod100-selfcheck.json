@@ -1,0 +1,743 @@
+{
+  "certificate": {
+    "schema": "parity/cert/0.1",
+    "corpus_sha256": "953bb4a4517949d0e14d9e21edcf4ff7108a847fbccc9e26f0fc802b893f8240",
+    "reference": {
+      "model_id": "qwen3.8-flash-next",
+      "sha": "f97871c71464f3f2",
+      "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
+      "pass_count": 78
+    },
+    "candidate": {
+      "model_id": "qwen3.8-flash-next",
+      "sha": "f97871c71464f3f2",
+      "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
+      "pass_count": 78
+    },
+    "n_prompts": 100,
+    "task": {
+      "n": 100,
+      "reference_pass": 0.78,
+      "candidate_pass": 0.78,
+      "reference_ci": [
+        0.6893,
+        0.85
+      ],
+      "candidate_ci": [
+        0.6893,
+        0.85
+      ],
+      "z": 0.0,
+      "p_value": 1.0,
+      "significant_regression": false,
+      "verdict": "PASS"
+    },
+    "mean_latency_ratio": 0.91,
+    "cost_ratio": 1.0003,
+    "verdict": "PASS",
+    "issued_by": "parity-cli/0.1",
+    "cert_sha256": "f49d7f459ae70aebe1e34f94ce059101b6c9e693f107ef53370811d294458168"
+  },
+  "per_prompt": [
+    {
+      "idx": 0,
+      "id": "math000",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 1,
+      "id": "math001",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 2,
+      "id": "math002",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 3,
+      "id": "math003",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 4,
+      "id": "math004",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 5,
+      "id": "math005",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 6,
+      "id": "math006",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 7,
+      "id": "math007",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 8,
+      "id": "math008",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 9,
+      "id": "math009",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 10,
+      "id": "math010",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 11,
+      "id": "math011",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 12,
+      "id": "math012",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 13,
+      "id": "math013",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 14,
+      "id": "math014",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 15,
+      "id": "math015",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 16,
+      "id": "math016",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 17,
+      "id": "math017",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 18,
+      "id": "math018",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 19,
+      "id": "math019",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 20,
+      "id": "math020",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 21,
+      "id": "math021",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 22,
+      "id": "math022",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 23,
+      "id": "math023",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 24,
+      "id": "math024",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 25,
+      "id": "math025",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 26,
+      "id": "math026",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 27,
+      "id": "math027",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 28,
+      "id": "math028",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 29,
+      "id": "math029",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 30,
+      "id": "math030",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 31,
+      "id": "math031",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 32,
+      "id": "math032",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 33,
+      "id": "math033",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 34,
+      "id": "math034",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 35,
+      "id": "math035",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 36,
+      "id": "math036",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 37,
+      "id": "math037",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 38,
+      "id": "math038",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 39,
+      "id": "math039",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 40,
+      "id": "conv000",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 41,
+      "id": "conv001",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 42,
+      "id": "conv002",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 43,
+      "id": "conv003",
+      "reference": false,
+      "candidate": false,
+      "how": "missing:212 F"
+    },
+    {
+      "idx": 44,
+      "id": "conv004",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 45,
+      "id": "conv005",
+      "reference": false,
+      "candidate": false,
+      "how": "missing:100 C"
+    },
+    {
+      "idx": 46,
+      "id": "conv006",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 47,
+      "id": "conv007",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 48,
+      "id": "conv008",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 49,
+      "id": "conv009",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 50,
+      "id": "conv010",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 51,
+      "id": "conv011",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 52,
+      "id": "conv012",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 53,
+      "id": "conv013",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 54,
+      "id": "conv014",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 55,
+      "id": "conv015",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 56,
+      "id": "conv016",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 57,
+      "id": "conv017",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 58,
+      "id": "conv018",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 59,
+      "id": "conv019",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 60,
+      "id": "json000",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 61,
+      "id": "json001",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 62,
+      "id": "json002",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 63,
+      "id": "json003",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 64,
+      "id": "json004",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 65,
+      "id": "json005",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 66,
+      "id": "json006",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 67,
+      "id": "json007",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 68,
+      "id": "json008",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 69,
+      "id": "json009",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 70,
+      "id": "json010",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 71,
+      "id": "json011",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 72,
+      "id": "json012",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 73,
+      "id": "json013",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 74,
+      "id": "json014",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 75,
+      "id": "json015",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 76,
+      "id": "json016",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 77,
+      "id": "json017",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 78,
+      "id": "json018",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 79,
+      "id": "json019",
+      "reference": false,
+      "candidate": false,
+      "how": "regex"
+    },
+    {
+      "idx": 80,
+      "id": "instr000",
+      "reference": false,
+      "candidate": false,
+      "how": "missing:red"
+    },
+    {
+      "idx": 81,
+      "id": "instr001",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 82,
+      "id": "instr002",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 83,
+      "id": "instr003",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 84,
+      "id": "instr004",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 85,
+      "id": "instr005",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 86,
+      "id": "instr006",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 87,
+      "id": "instr007",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 88,
+      "id": "instr008",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 89,
+      "id": "instr009",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 90,
+      "id": "instr010",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 91,
+      "id": "instr011",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 92,
+      "id": "instr012",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 93,
+      "id": "instr013",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 94,
+      "id": "instr014",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 95,
+      "id": "instr015",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 96,
+      "id": "instr016",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 97,
+      "id": "instr017",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 98,
+      "id": "instr018",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    },
+    {
+      "idx": 99,
+      "id": "instr019",
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
+    }
+  ]
+}

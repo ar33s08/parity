@@ -34,7 +34,7 @@ for i in range(19):
     rows.append({"id": "json%03d" % (i + 1),
                  "prompt": "Return ONLY a JSON object with %d keys: %s. Values any. No prose." % (
                      len(keys), ", ".join(DQ + k + DQ for k in keys)),
-                 "regex": "".join('\\"%s\\"' % k for k in keys)})
+                 "regex": "[\\s\\S]*".join('\\"%s\\"' % k for k in keys)})
 
 IF = [("List three primary colors. Do NOT mention green.", ["blue", "red"]),
       ("Name the three planets closest to the sun. Do not mention Earth.", ["Mercury", "Venus"]),
