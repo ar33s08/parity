@@ -135,6 +135,17 @@ def rewrite_file(path, local_url, local_model):
 
     new = _LOCAL_URL_RE.sub(sub_base, src)
     new = _JS_LOCAL_URL_RE.sub(sub_base_js, new)
+    # host-literal replacement: catches any syntactic context (annotated kwargs,
+    # asserts, config files). https://api.openai.com/v1/chat/completions ->
+    # <target-without-/v1>/v1/chat/completions, valid for OpenAI-compatible servers.
+    prefix = local_url.rstrip("/")
+    if prefix.endswith("/v1"):
+        prefix = prefix[: -len("/v1")]
+    for host in CLOUD_HOSTS:
+        lit = "https://" + host
+        if lit in new:
+            new = new.replace(lit, prefix)
+            n += 1
     # only rewrite model= when the same file pointed at a cloud host
     if any(h in src for h in CLOUD_HOSTS):
         new = _MODEL_RE.sub(sub_model, new)

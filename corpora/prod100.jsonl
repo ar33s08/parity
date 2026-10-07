@@ -1,0 +1,100 @@
+{"id": "math000", "prompt": "What is 84 * 9? Reply with just the number.", "must_contain": ["756"]}
+{"id": "math001", "prompt": "What is 97 * 19? Reply with just the number.", "must_contain": ["1843"]}
+{"id": "math002", "prompt": "What is 31 - 10? Reply with just the number.", "must_contain": ["21"]}
+{"id": "math003", "prompt": "What is 16 - 45? Reply with just the number.", "must_contain": ["-29"]}
+{"id": "math004", "prompt": "What is 72 - 7? Reply with just the number.", "must_contain": ["65"]}
+{"id": "math005", "prompt": "What is 57 * 4? Reply with just the number.", "must_contain": ["228"]}
+{"id": "math006", "prompt": "What is 14 * 15? Reply with just the number.", "must_contain": ["210"]}
+{"id": "math007", "prompt": "What is 67 * 40? Reply with just the number.", "must_contain": ["2680"]}
+{"id": "math008", "prompt": "What is 74 - 14? Reply with just the number.", "must_contain": ["60"]}
+{"id": "math009", "prompt": "What is 86 - 46? Reply with just the number.", "must_contain": ["40"]}
+{"id": "math010", "prompt": "What is 56 + 16? Reply with just the number.", "must_contain": ["72"]}
+{"id": "math011", "prompt": "What is 78 * 19? Reply with just the number.", "must_contain": ["1482"]}
+{"id": "math012", "prompt": "What is 23 + 46? Reply with just the number.", "must_contain": ["69"]}
+{"id": "math013", "prompt": "What is 46 * 19? Reply with just the number.", "must_contain": ["874"]}
+{"id": "math014", "prompt": "What is 30 * 23? Reply with just the number.", "must_contain": ["690"]}
+{"id": "math015", "prompt": "What is 14 * 26? Reply with just the number.", "must_contain": ["364"]}
+{"id": "math016", "prompt": "What is 48 - 24? Reply with just the number.", "must_contain": ["24"]}
+{"id": "math017", "prompt": "What is 36 - 4? Reply with just the number.", "must_contain": ["32"]}
+{"id": "math018", "prompt": "What is 61 * 36? Reply with just the number.", "must_contain": ["2196"]}
+{"id": "math019", "prompt": "What is 51 - 7? Reply with just the number.", "must_contain": ["44"]}
+{"id": "math020", "prompt": "What is 40 - 42? Reply with just the number.", "must_contain": ["-2"]}
+{"id": "math021", "prompt": "What is 49 * 38? Reply with just the number.", "must_contain": ["1862"]}
+{"id": "math022", "prompt": "What is 93 * 6? Reply with just the number.", "must_contain": ["558"]}
+{"id": "math023", "prompt": "What is 87 + 16? Reply with just the number.", "must_contain": ["103"]}
+{"id": "math024", "prompt": "What is 13 * 16? Reply with just the number.", "must_contain": ["208"]}
+{"id": "math025", "prompt": "What is 51 + 19? Reply with just the number.", "must_contain": ["70"]}
+{"id": "math026", "prompt": "What is 84 * 25? Reply with just the number.", "must_contain": ["2100"]}
+{"id": "math027", "prompt": "What is 50 * 24? Reply with just the number.", "must_contain": ["1200"]}
+{"id": "math028", "prompt": "What is 88 - 19? Reply with just the number.", "must_contain": ["69"]}
+{"id": "math029", "prompt": "What is 90 * 43? Reply with just the number.", "must_contain": ["3870"]}
+{"id": "math030", "prompt": "What is 80 * 42? Reply with just the number.", "must_contain": ["3360"]}
+{"id": "math031", "prompt": "What is 71 * 48? Reply with just the number.", "must_contain": ["3408"]}
+{"id": "math032", "prompt": "What is 23 + 31? Reply with just the number.", "must_contain": ["54"]}
+{"id": "math033", "prompt": "What is 37 - 42? Reply with just the number.", "must_contain": ["-5"]}
+{"id": "math034", "prompt": "What is 74 - 16? Reply with just the number.", "must_contain": ["58"]}
+{"id": "math035", "prompt": "What is 44 * 5? Reply with just the number.", "must_contain": ["220"]}
+{"id": "math036", "prompt": "What is 7 + 22? Reply with just the number.", "must_contain": ["29"]}
+{"id": "math037", "prompt": "What is 37 * 6? Reply with just the number.", "must_contain": ["222"]}
+{"id": "math038", "prompt": "What is 75 + 47? Reply with just the number.", "must_contain": ["122"]}
+{"id": "math039", "prompt": "What is 30 + 43? Reply with just the number.", "must_contain": ["73"]}
+{"id": "conv000", "prompt": "Convert 0.5 mile to km. Reply only 'X km' with X correct to 1 decimal.", "must_contain": ["0.8 km"]}
+{"id": "conv001", "prompt": "Convert 3 mile to km. Reply only 'X km' with X correct to 1 decimal.", "must_contain": ["4.8 km"]}
+{"id": "conv002", "prompt": "Convert 10 km to mile. Reply only 'X mile' with X correct to 1 decimal.", "must_contain": ["6.2 mile"]}
+{"id": "conv003", "prompt": "Convert 100 C to F. Reply only 'X F' with X correct to 1 decimal.", "must_contain": ["212 F"]}
+{"id": "conv004", "prompt": "Convert 37 C to F. Reply only 'X F' with X correct to 1 decimal.", "must_contain": ["98.6 F"]}
+{"id": "conv005", "prompt": "Convert 212 F to C. Reply only 'X C' with X correct to 1 decimal.", "must_contain": ["100 C"]}
+{"id": "conv006", "prompt": "Convert 5 kg to lb. Reply only 'X lb' with X correct to 1 decimal.", "must_contain": ["11.0 lb"]}
+{"id": "conv007", "prompt": "Convert 20 lb to kg. Reply only 'X kg' with X correct to 1 decimal.", "must_contain": ["9.1 kg"]}
+{"id": "conv008", "prompt": "Convert 3 gallon to liter. Reply only 'X liter' with X correct to 1 decimal.", "must_contain": ["11.4 liter"]}
+{"id": "conv009", "prompt": "Convert 2 liter to gallon. Reply only 'X gallon' with X correct to 1 decimal.", "must_contain": ["0.5 gallon"]}
+{"id": "conv010", "prompt": "Convert 12 inch to cm. Reply only 'X cm' with X correct to 1 decimal.", "must_contain": ["30.5 cm"]}
+{"id": "conv011", "prompt": "Convert 50 cm to inch. Reply only 'X inch' with X correct to 1 decimal.", "must_contain": ["19.7 inch"]}
+{"id": "conv012", "prompt": "Convert 100 km/h to mph. Reply only 'X mph' with X correct to 1 decimal.", "must_contain": ["62.1 mph"]}
+{"id": "conv013", "prompt": "Convert 60 mph to km/h. Reply only 'X km/h' with X correct to 1 decimal.", "must_contain": ["96.6 km/h"]}
+{"id": "conv014", "prompt": "Convert 7 foot to meter. Reply only 'X meter' with X correct to 1 decimal.", "must_contain": ["2.1 meter"]}
+{"id": "conv015", "prompt": "Convert 30 meter to foot. Reply only 'X foot' with X correct to 1 decimal.", "must_contain": ["98.4 foot"]}
+{"id": "conv016", "prompt": "Convert 4 pint to liter. Reply only 'X liter' with X correct to 1 decimal.", "must_contain": ["1.9 liter"]}
+{"id": "conv017", "prompt": "Convert 1500 gram to lb. Reply only 'X lb' with X correct to 1 decimal.", "must_contain": ["3.3 lb"]}
+{"id": "conv018", "prompt": "Convert 2.5 mile to km. Reply only 'X km' with X correct to 1 decimal.", "must_contain": ["4.0 km"]}
+{"id": "conv019", "prompt": "Convert 80 km/h to mph. Reply only 'X mph' with X correct to 1 decimal.", "must_contain": ["49.7 mph"]}
+{"id": "json000", "prompt": "Return ONLY a JSON object with keys \"name\" (string) and \"age\" (int). No prose.", "regex": "\\{[\\s\\S]*\"name\"[\\s\\S]*\"age\""}
+{"id": "json001", "prompt": "Return ONLY a JSON object with 3 keys: \"qty\", \"total\", \"count\". Values any. No prose.", "regex": "\\\"qty\\\"\\\"total\\\"\\\"count\\\""}
+{"id": "json002", "prompt": "Return ONLY a JSON object with 2 keys: \"email\", \"items\". Values any. No prose.", "regex": "\\\"email\\\"\\\"items\\\""}
+{"id": "json003", "prompt": "Return ONLY a JSON object with 3 keys: \"price\", \"status\", \"email\". Values any. No prose.", "regex": "\\\"price\\\"\\\"status\\\"\\\"email\\\""}
+{"id": "json004", "prompt": "Return ONLY a JSON object with 3 keys: \"email\", \"total\", \"status\". Values any. No prose.", "regex": "\\\"email\\\"\\\"total\\\"\\\"status\\\""}
+{"id": "json005", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"price\", \"id\". Values any. No prose.", "regex": "\\\"total\\\"\\\"price\\\"\\\"id\\\""}
+{"id": "json006", "prompt": "Return ONLY a JSON object with 2 keys: \"count\", \"items\". Values any. No prose.", "regex": "\\\"count\\\"\\\"items\\\""}
+{"id": "json007", "prompt": "Return ONLY a JSON object with 2 keys: \"price\", \"status\". Values any. No prose.", "regex": "\\\"price\\\"\\\"status\\\""}
+{"id": "json008", "prompt": "Return ONLY a JSON object with 2 keys: \"price\", \"email\". Values any. No prose.", "regex": "\\\"price\\\"\\\"email\\\""}
+{"id": "json009", "prompt": "Return ONLY a JSON object with 3 keys: \"status\", \"qty\", \"id\". Values any. No prose.", "regex": "\\\"status\\\"\\\"qty\\\"\\\"id\\\""}
+{"id": "json010", "prompt": "Return ONLY a JSON object with 2 keys: \"status\", \"price\". Values any. No prose.", "regex": "\\\"status\\\"\\\"price\\\""}
+{"id": "json011", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"count\", \"email\". Values any. No prose.", "regex": "\\\"total\\\"\\\"count\\\"\\\"email\\\""}
+{"id": "json012", "prompt": "Return ONLY a JSON object with 2 keys: \"qty\", \"id\". Values any. No prose.", "regex": "\\\"qty\\\"\\\"id\\\""}
+{"id": "json013", "prompt": "Return ONLY a JSON object with 3 keys: \"count\", \"status\", \"id\". Values any. No prose.", "regex": "\\\"count\\\"\\\"status\\\"\\\"id\\\""}
+{"id": "json014", "prompt": "Return ONLY a JSON object with 3 keys: \"email\", \"total\", \"count\". Values any. No prose.", "regex": "\\\"email\\\"\\\"total\\\"\\\"count\\\""}
+{"id": "json015", "prompt": "Return ONLY a JSON object with 2 keys: \"id\", \"status\". Values any. No prose.", "regex": "\\\"id\\\"\\\"status\\\""}
+{"id": "json016", "prompt": "Return ONLY a JSON object with 3 keys: \"qty\", \"id\", \"price\". Values any. No prose.", "regex": "\\\"qty\\\"\\\"id\\\"\\\"price\\\""}
+{"id": "json017", "prompt": "Return ONLY a JSON object with 3 keys: \"status\", \"total\", \"id\". Values any. No prose.", "regex": "\\\"status\\\"\\\"total\\\"\\\"id\\\""}
+{"id": "json018", "prompt": "Return ONLY a JSON object with 2 keys: \"total\", \"id\". Values any. No prose.", "regex": "\\\"total\\\"\\\"id\\\""}
+{"id": "json019", "prompt": "Return ONLY a JSON object with 3 keys: \"total\", \"price\", \"status\". Values any. No prose.", "regex": "\\\"total\\\"\\\"price\\\"\\\"status\\\""}
+{"id": "instr000", "prompt": "List three primary colors. Do NOT mention green.", "must_contain": ["blue", "red"]}
+{"id": "instr001", "prompt": "Name the three planets closest to the sun. Do not mention Earth.", "must_contain": ["Mercury", "Venus"]}
+{"id": "instr002", "prompt": "Say exactly: hello world. Add nothing else.", "must_contain": ["hello world"]}
+{"id": "instr003", "prompt": "Write a haiku about rain. It must contain the word 'rain'.", "must_contain": ["rain"]}
+{"id": "instr004", "prompt": "Give one prime number between 20 and 30.", "must_contain": ["23"]}
+{"id": "instr005", "prompt": "Spell 'necessary' correctly, in quotes only.", "must_contain": ["necessary"]}
+{"id": "instr006", "prompt": "Give a JSON array with exactly 3 numbers, nothing else.", "must_contain": ["["]}
+{"id": "instr007", "prompt": "Reply with the reverse of the word 'stressed'.", "must_contain": ["desserts"]}
+{"id": "instr008", "prompt": "How many letters in 'banana'? Reply with just the number.", "must_contain": ["6"]}
+{"id": "instr009", "prompt": "Convert binary 1010 to decimal, number only.", "must_contain": ["10"]}
+{"id": "instr010", "prompt": "List two HTTP status codes for errors. Do not mention 200.", "must_contain": ["4"]}
+{"id": "instr011", "prompt": "What does HTTP stand for? Include the substring 'rtp'.", "must_contain": ["rtp"]}
+{"id": "instr012", "prompt": "Name HTTP methods: say 'GET' and one other.", "must_contain": ["GET"]}
+{"id": "instr013", "prompt": "Write SQL: select all columns from users table. Start with SELECT.", "must_contain": ["SELECT"]}
+{"id": "instr014", "prompt": "Git command to create a new branch named dev. One line.", "must_contain": ["branch"]}
+{"id": "instr015", "prompt": "List the first three Fibonacci numbers, comma separated.", "must_contain": ["1"]}
+{"id": "instr016", "prompt": "How many sides does a hexagon have? Number only.", "must_contain": ["6"]}
+{"id": "instr017", "prompt": "Give the chemical symbol for gold, in quotes only.", "must_contain": ["Au"]}
+{"id": "instr018", "prompt": "Say 'OK' and nothing else.", "must_contain": ["OK"]}
+{"id": "instr019", "prompt": "One regex that matches a 5-digit zip code. No prose.", "must_contain": ["d{5}"]}
