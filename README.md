@@ -31,3 +31,24 @@ Exit code 1 = statistically significant regression (CI gate for automation).
 - Judge-model grading is only as fair as the judge; deterministic rubrics preferred.
 - Latency ratios are single-run wall-clock, not p95 yet.
 - Certificates are content-hashed, not yet signed by a hosted authority.
+
+## parity migrate — the agent that fires your cloud vendor
+
+```bash
+# find every cloud LLM call site in a repo (Python + JS/TS)
+python -m parity.cli migrate scan ./myrepo
+
+# migrate + gate + certify in ONE command
+python -m parity.cli migrate certify ./myrepo \
+  --url https://dgx.tailnet.ts.net/v1 --model qwen3-coder-q4 --key *** \
+  --reference-url https://api.openai.com/v1 --reference-model gpt-4.1 --reference-key *** \
+  --corpus prod-prompts.jsonl --out cert.json
+```
+
+The certificate embeds the migration record (sites migrated, hosts before,
+files changed) pinned by content hash. Exit code 1 = regression detected —
+wire it into CI: **no certificate, no merge.**
+
+v0.1 verified cycle: 5 cloud sites → 0 across explicit URLs, pinned models,
+implicit SDK defaults, and attribute-style constructors; all files compile;
+corpus gate PASS with valid cert_sha256.
