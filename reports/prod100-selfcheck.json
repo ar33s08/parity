@@ -1,42 +1,42 @@
 {
   "certificate": {
     "schema": "parity/cert/0.1",
-    "corpus_sha256": "953bb4a4517949d0e14d9e21edcf4ff7108a847fbccc9e26f0fc802b893f8240",
+    "corpus_sha256": "f075d9b0bc51c365a5d887abbadf756b56b822c4d9bb6a1af7c586da5d08cb2e",
     "reference": {
       "model_id": "qwen3.8-flash-next",
       "sha": "f97871c71464f3f2",
       "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
-      "pass_count": 78
+      "pass_count": 97
     },
     "candidate": {
       "model_id": "qwen3.8-flash-next",
       "sha": "f97871c71464f3f2",
       "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
-      "pass_count": 78
+      "pass_count": 97
     },
     "n_prompts": 100,
     "task": {
       "n": 100,
-      "reference_pass": 0.78,
-      "candidate_pass": 0.78,
+      "reference_pass": 0.97,
+      "candidate_pass": 0.97,
       "reference_ci": [
-        0.6893,
-        0.85
+        0.9155,
+        0.9897
       ],
       "candidate_ci": [
-        0.6893,
-        0.85
+        0.9155,
+        0.9897
       ],
       "z": 0.0,
       "p_value": 1.0,
       "significant_regression": false,
       "verdict": "PASS"
     },
-    "mean_latency_ratio": 0.91,
-    "cost_ratio": 1.0003,
+    "mean_latency_ratio": 0.65,
+    "cost_ratio": 1.0012,
     "verdict": "PASS",
     "issued_by": "parity-cli/0.1",
-    "cert_sha256": "f49d7f459ae70aebe1e34f94ce059101b6c9e693f107ef53370811d294458168"
+    "cert_sha256": "d227756c8ebc067fae6547e2b717d74d57624f2231d1ef156291ee784aea5042"
   },
   "per_prompt": [
     {
@@ -469,135 +469,135 @@
     {
       "idx": 61,
       "id": "json001",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 62,
       "id": "json002",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 63,
       "id": "json003",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 64,
       "id": "json004",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 65,
       "id": "json005",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 66,
       "id": "json006",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 67,
       "id": "json007",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 68,
       "id": "json008",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 69,
       "id": "json009",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 70,
       "id": "json010",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 71,
       "id": "json011",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 72,
       "id": "json012",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 73,
       "id": "json013",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 74,
       "id": "json014",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 75,
       "id": "json015",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 76,
       "id": "json016",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 77,
       "id": "json017",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 78,
       "id": "json018",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 79,
       "id": "json019",
-      "reference": false,
-      "candidate": false,
-      "how": "regex"
+      "reference": true,
+      "candidate": true,
+      "how": "rubric"
     },
     {
       "idx": 80,

@@ -1,0 +1,39 @@
+{
+  "schema": "parity/cert/0.1",
+  "corpus_sha256": "f075d9b0bc51c365a5d887abbadf756b56b822c4d9bb6a1af7c586da5d08cb2e",
+  "reference": {
+    "model_id": "qwen3.8-flash-next",
+    "sha": "f97871c71464f3f2",
+    "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
+    "pass_count": 97
+  },
+  "candidate": {
+    "model_id": "qwen3.8-flash-next",
+    "sha": "f97871c71464f3f2",
+    "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
+    "pass_count": 97
+  },
+  "n_prompts": 100,
+  "task": {
+    "n": 100,
+    "reference_pass": 0.97,
+    "candidate_pass": 0.97,
+    "reference_ci": [
+      0.9155,
+      0.9897
+    ],
+    "candidate_ci": [
+      0.9155,
+      0.9897
+    ],
+    "z": 0.0,
+    "p_value": 1.0,
+    "significant_regression": false,
+    "verdict": "PASS"
+  },
+  "mean_latency_ratio": 0.65,
+  "cost_ratio": 1.0012,
+  "verdict": "PASS",
+  "issued_by": "parity-cli/0.1",
+  "cert_sha256": "d227756c8ebc067fae6547e2b717d74d57624f2231d1ef156291ee784aea5042"
+}
