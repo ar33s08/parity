@@ -58,13 +58,17 @@ def _scan_py(path):
     except SyntaxError:
         return out
     shimmed = "parity-migrate" in src
+    _SDK_NAMES = ("OpenAI", "AsyncOpenAI", "Anthropic", "AsyncAnthropic")
     for node in ast.walk(tree):
-        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name):
-            if node.func.id in ("OpenAI", "AsyncOpenAI", "Anthropic", "AsyncAnthropic"):
+        if isinstance(node, ast.Call):
+            fname = (node.func.id if isinstance(node.func, ast.Name)
+                     else node.func.attr if isinstance(node.func, ast.Attribute)
+                     else None)
+            if fname in _SDK_NAMES:
                 has_base = any(k.arg in ("base_url", "api_base") for k in node.keywords)
                 if not has_base and not shimmed:
                     out.append({"file": path, "line": node.lineno,
-                                "host": "implicit:" + node.func.id,
+                                "host": "implicit:" + fname,
                                 "kind": "implicit-sdk",
                                 "snippet": ast.unparse(node)[:160]})
     return out
