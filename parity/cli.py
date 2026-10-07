@@ -15,6 +15,10 @@ def load_jsonl(path):
 
 
 def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == "migrate":
+        from .migrate_cli import cmd_migrate
+        return cmd_migrate(argv[1:])
     p = argparse.ArgumentParser(prog="parity")
     sub = p.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("compare")
