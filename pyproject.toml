@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parity-certify"
+version = "0.3.0"
+description = "Certified cloud->local LLM migration: rewrite call sites, gate on your own prompt corpus, issue a hash-pinned equivalence certificate."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+parity = "parity.cli:main"
+
+[tool.setuptools]
+packages = ["parity"]
