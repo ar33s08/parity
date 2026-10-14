@@ -26,11 +26,14 @@ python -m parity.cli compare \
 Corpus format: JSONL, `{"id","prompt", optional "must_contain","must_not_contain","regex","max_seconds"}`.
 Exit code 1 = statistically significant regression (CI gate for automation).
 
-## Honest limits (v0.1)
+## Honest limits (v0.2)
 - n=5 smoke corpus; statistical power needs >=100 prompts (README contract).
 - Judge-model grading is only as fair as the judge; deterministic rubrics preferred.
 - Latency ratios are single-run wall-clock, not p95 yet.
 - Certificates are content-hashed, not yet signed by a hosted authority.
+- `wss://` realtime/live endpoints are detected and reported as
+  UNSUPPORTED residual — never silently rewritten (they are not
+  OpenAI-compatible HTTP). Migrate them manually.
 
 ## parity migrate — the agent that fires your cloud vendor
 
@@ -52,3 +55,11 @@ wire it into CI: **no certificate, no merge.**
 v0.1 verified cycle: 5 cloud sites → 0 across explicit URLs, pinned models,
 implicit SDK defaults, and attribute-style constructors; all files compile;
 corpus gate PASS with valid cert_sha256.
+
+v0.2 real-world trial (openai/openai-cookbook, 627 source files): 101 cloud
+call sites found, 77 files rewritten, independent rescan shows only 6
+residual — all `wss://` realtime sockets, labeled UNSUPPORTED instead of
+silently skipped; zero compile regressions introduced (verified against the
+pristine clone). Bugs this trial caught and fixed: env-shim landing before a
+PEP 723 `# ///` block, before a module docstring / `__future__` import, and
+`wss://` hosts invisible to the scanner.

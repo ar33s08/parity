@@ -76,7 +76,11 @@ def cmd_migrate(argv):
         findings = scan_repo(repo)
         print(json.dumps(findings, indent=2))
         hosts = sorted({f["host"] for f in findings})
-        print("\n%d cloud call sites; hosts: %s" % (len(findings), ", ".join(hosts) or "-"),
+        unsup = sum(1 for f in findings if f["kind"] == "unsupported-wss")
+        print("\n%d cloud call sites%s; hosts: %s" % (
+            len(findings),
+            " (%d UNSUPPORTED wss/realtime)" % unsup if unsup else "",
+            ", ".join(hosts) or "-"),
               file=sys.stderr)
         return 0
     if action == "plan":
@@ -89,7 +93,14 @@ def cmd_migrate(argv):
         else:
             plan = build_plan(scan_repo(repo), url, model)
         changed = apply_plan(plan)
-        print(json.dumps({"changed": changed}, indent=2))
+        residual = [f for f in scan_repo(repo)
+                    if f["kind"] != "implicit-sdk"]
+        print(json.dumps({"changed": changed,
+                          "residual": residual[:50]}, indent=2))
+        if residual:
+            print("\n%d sites RESIDUAL (not rewritten — unsupported kind or "
+                  "rescan mismatch). Fix manually before certifying."
+                  % len(residual), file=sys.stderr)
         print("\nNow GATE it: run `parity compare` on this repo's corpus before "
               "opening the PR. No certificate, no merge.", file=sys.stderr)
         return 0

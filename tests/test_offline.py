@@ -94,6 +94,47 @@ def test_migrate_full_cycle(tmp_path=None):
     py_compile.compile(os.path.join(d, "tell.py"), doraise=True)
 
 
+def test_migrate_pep723_and_docstring_placement(tmp_path=None):
+    """Real-world bugs found scanning openai/openai-cookbook (627 files):
+    shim must never land before a PEP 723 block, a module docstring, or a
+    __future__ import — all three are syntax/semantics breakers."""
+    import tempfile
+    import py_compile
+    d = tempfile.mkdtemp()
+    open(os.path.join(d, "pep723.py"), "w").write(
+        'import os\n# /// script\n# dependencies = ["openai>=3.13.0"]\n# ///\n'
+        '"""Doc."""\nimport openai\nclient = openai.OpenAI()\n')
+    open(os.path.join(d, "future.py"), "w").write(
+        '"""Serves the app."""\nfrom __future__ import annotations\n'
+        'import openai\nclient = openai.OpenAI()\n')
+    apply_plan(build_plan(scan_repo(d), "https://local.example/v1", "local-m"))
+    for fn in ("pep723.py", "future.py"):
+        py_compile.compile(os.path.join(d, fn), doraise=True)
+    src = open(os.path.join(d, "future.py")).read()
+    assert src.index("parity-migrate") > src.index("from __future__")
+    assert src.index("parity-migrate") > src.index('"""Serves')
+    assert scan_repo(d) == []
+
+
+def test_migrate_wss_flagged_not_silently_left(tmp_path=None):
+    """wss:// realtime endpoints are NOT OpenAI-compatible HTTP; rewriting them
+    would break silently. They must be labeled unsupported-wss, never vanish."""
+    import tempfile
+    d = tempfile.mkdtemp()
+    open(os.path.join(d, "rt.js"), "w").write(
+        'const U = "wss://api.openai.com/v1/live/sessions";\n'
+        'const c = new OpenAI({ baseURL: "https://api.openai.com/v1" });\n')
+    pre = scan_repo(d)
+    kinds = [f["kind"] for f in pre]
+    assert "unsupported-wss" in kinds
+    apply_plan(build_plan(pre, "https://local.example/v1", "local-m"))
+    post = scan_repo(d)
+    assert all(f["kind"] == "unsupported-wss" for f in post)
+    src = open(os.path.join(d, "rt.js")).read()
+    assert "wss://api.openai.com" in src  # untouched, honestly
+    assert "local.example" in src        # http site WAS rewritten
+
+
 def test_corpus_selftest():
     path = os.path.join(os.path.dirname(__file__), "..", "corpora", "prod100.jsonl")
     if not os.path.exists(path):

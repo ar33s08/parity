@@ -50,8 +50,10 @@ def _scan_py(path):
         low = line.lower()
         for host in CLOUD_HOSTS:
             if host in low:
+                kind = ("unsupported-wss" if "wss://" + host in low
+                        else "literal-url")
                 out.append({"file": path, "line": i, "host": host,
-                            "kind": "literal-url", "snippet": line.strip()[:160]})
+                            "kind": kind, "snippet": line.strip()[:160]})
     # SDK client constructions without explicit URL (implicit cloud default)
     try:
         tree = ast.parse(src)
@@ -74,7 +76,7 @@ def _scan_py(path):
     return out
 
 
-_JS_URL_RE = re.compile(r"https?://([\w.-]+)")
+_JS_URL_RE = re.compile(r"(?:wss?|https?)://([\w.-]+)")
 _JS_CTOR_RE = re.compile(r"new\s+(OpenAI|Anthropic)\s*\(")
 
 
@@ -88,8 +90,10 @@ def _scan_js(path):
         for m in _JS_URL_RE.finditer(line):
             host = m.group(1)
             if host in CLOUD_HOSTS:
+                kind = ("unsupported-wss" if m.group(0).startswith("wss")
+                        else "literal-url")
                 out.append({"file": path, "line": i, "host": host,
-                            "kind": "literal-url", "snippet": line.strip()[:160]})
+                            "kind": kind, "snippet": line.strip()[:160]})
         if _JS_CTOR_RE.search(line) and "parity-migrate" not in src:
             out.append({"file": path, "line": i, "host": "implicit-js",
                         "kind": "implicit-sdk", "snippet": line.strip()[:160]})
@@ -177,6 +181,32 @@ def apply_plan(plan):
             shim = ('process.env.OPENAI_BASE_URL ||= "%s"; // parity-migrate\n'
                     'process.env.ANTHROPIC_BASE_URL ||= "%s"; // parity-migrate\n'
                     % (plan["target"]["url"], plan["target"]["url"]))
-        open(f, "w", encoding="utf-8").write(shim + src)
+        # insert after shebang + leading comment/blank block, never before
+        # it (PEP 723 metadata blocks and __future__ imports are fragile)
+        lines = src.splitlines(keepends=True)
+        k = 0
+        if lines and lines[0].startswith("#!"):
+            k = 1
+        while k < len(lines) and (not lines[k].strip()
+                                  or lines[k].lstrip().startswith("#")):
+            k += 1
+        if py and k < len(lines):
+            # module docstring and __future__ imports must stay before the shim
+            try:
+                mod = ast.parse(src)
+                for stmt in mod.body:
+                    if (isinstance(stmt, ast.Expr)
+                            and isinstance(stmt.value, ast.Constant)
+                            and isinstance(stmt.value.value, str)):
+                        k = max(k, stmt.end_lineno)  # docstring
+                    elif (isinstance(stmt, ast.ImportFrom)
+                          and stmt.module == "__future__"):
+                        k = max(k, stmt.end_lineno)  # __future__ import
+                    else:
+                        break
+            except SyntaxError:
+                pass
+        open(f, "w", encoding="utf-8").write(
+            "".join(lines[:k]) + shim + "".join(lines[k:]))
         changed[f] = changed.get(f, 0) + 1
     return changed
