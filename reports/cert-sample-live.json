@@ -1,53 +1,55 @@
 {
-  "schema": "parity/cert/0.1",
-  "corpus_sha256": "75287f5a2146cd89f3996027fec41eebedac95ce7b43f81eadd54f99359bd29c",
-  "reference": {
-    "model_id": "qwen3.8-flash-next",
-    "sha": "f97871c71464f3f2",
-    "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
-    "pass_count": 5
-  },
-  "candidate": {
-    "model_id": "qwen3.8-flash-next",
-    "sha": "f97871c71464f3f2",
-    "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
-    "pass_count": 5
-  },
-  "n_prompts": 5,
-  "task": {
-    "n": 5,
-    "reference_pass": 1.0,
-    "candidate_pass": 1.0,
-    "reference_ci": [
-      0.5655,
-      1.0
-    ],
-    "candidate_ci": [
-      0.5655,
-      1.0
-    ],
-    "z": 0.0,
-    "p_value": 1.0,
-    "significant_regression": false,
-    "verdict": "PASS"
-  },
-  "mean_latency_ratio": 0.86,
-  "cost_ratio": 1.0582,
-  "verdict": "PASS",
-  "issued_by": "parity-cli/0.1",
-  "migration": {
-    "repo": "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice",
-    "call_sites_migrated": 6,
-    "hosts_before": [
-      "api.openai.com"
-    ],
-    "files": {
-      "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/audio/duplex_voice_agent_evaluation/assistants/tests/test_v3_protocol.py": 1,
-      "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/audio/duplex_voice_agent_evaluation/run_harness/tests/test_gpt_live_protocol.py": 1,
-      "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/voice_solutions/realtime_translation_guide/browser-translation-demo/scripts/smoke-realtime.mjs": 0,
-      "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/voice_solutions/realtime_translation_guide/twilio-translation-demo/src/realtime-translation.js": 0,
-      "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/voice_solutions/realtime_translation_guide/twilio-translation-demo/test/realtime-translation.test.js": 1
-    }
-  },
-  "cert_sha256": "b9f3b6bf4925188a2d7fc507d9efeecf9e0144f0ae65931564eb23646b8ab692"
+  "certificate": {
+    "schema": "parity/cert/0.1",
+    "corpus_sha256": "75287f5a2146cd89f3996027fec41eebedac95ce7b43f81eadd54f99359bd29c",
+    "reference": {
+      "model_id": "qwen3.8-flash-next",
+      "sha": "f97871c71464f3f2",
+      "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
+      "pass_count": 5
+    },
+    "candidate": {
+      "model_id": "qwen3.8-flash-next",
+      "sha": "f97871c71464f3f2",
+      "endpoint": "https://spark-fceb.tail391339.ts.net/v1",
+      "pass_count": 5
+    },
+    "n_prompts": 5,
+    "task": {
+      "n": 5,
+      "reference_pass": 1.0,
+      "candidate_pass": 1.0,
+      "reference_ci": [
+        0.5655,
+        1.0
+      ],
+      "candidate_ci": [
+        0.5655,
+        1.0
+      ],
+      "z": 0.0,
+      "p_value": 1.0,
+      "significant_regression": false,
+      "verdict": "PASS"
+    },
+    "mean_latency_ratio": 0.86,
+    "cost_ratio": 1.0582,
+    "verdict": "PASS",
+    "issued_by": "parity-cli/0.1",
+    "migration": {
+      "repo": "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice",
+      "call_sites_migrated": 6,
+      "hosts_before": [
+        "api.openai.com"
+      ],
+      "files": {
+        "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/audio/duplex_voice_agent_evaluation/assistants/tests/test_v3_protocol.py": 1,
+        "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/audio/duplex_voice_agent_evaluation/run_harness/tests/test_gpt_live_protocol.py": 1,
+        "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/voice_solutions/realtime_translation_guide/browser-translation-demo/scripts/smoke-realtime.mjs": 0,
+        "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/voice_solutions/realtime_translation_guide/twilio-translation-demo/src/realtime-translation.js": 0,
+        "/Users/areesmanesia/.hermes/cache/scratch/realrepo-slice/examples/voice_solutions/realtime_translation_guide/twilio-translation-demo/test/realtime-translation.test.js": 1
+      }
+    },
+    "cert_sha256": "b9f3b6bf4925188a2d7fc507d9efeecf9e0144f0ae65931564eb23646b8ab692"
+  }
 }
