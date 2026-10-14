@@ -24,6 +24,12 @@ python -m parity.cli compare \
   --out report.json
 ```
 Corpus format: JSONL, `{"id","prompt", optional "must_contain","must_not_contain","regex","max_seconds"}`.
+Rows may instead carry `"messages": [...]` (real chat requests from your logs).
+Don't have a corpus? Build one from your own LLM request logs:
+`python tools/build_corpus.py --in proxy-logs.jsonl --n 100 --out corpus.jsonl`
+(dedupes, redacts API-key-shaped secrets, deterministic sampling so re-runs
+reproduce the same corpus hash). Transport errors on one item fail that item
+honestly instead of killing the run.
 Exit code 1 = statistically significant regression (CI gate for automation).
 
 ## Honest limits (v0.2)

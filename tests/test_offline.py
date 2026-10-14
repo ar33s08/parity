@@ -135,6 +135,52 @@ def test_migrate_wss_flagged_not_silently_left(tmp_path=None):
     assert "local.example" in src        # http site WAS rewritten
 
 
+def test_runner_message_lists_and_error_rows(tmp_path=None):
+    """Corpus rows may carry `messages` (chat logs); a transport error on one
+    item must record an errored row, not crash the gate."""
+    import tempfile
+    from parity.runner import run_corpus
+    d = tempfile.mkdtemp()
+    cp = os.path.join(d, "c.jsonl")
+    with open(cp, "w") as f:
+        f.write(json.dumps({"id": "m1",
+                            "messages": [{"role": "user", "content": "hi"}]}) + "\n")
+        f.write(json.dumps({"id": "bad", "prompt": "x"}) + "\n")
+
+    class HalfBad:
+        def complete(self, prompt, max_tokens=400):
+            if isinstance(prompt, list):
+                return {"text": "ok", "seconds": 0.1,
+                        "prompt_tokens": 1, "completion_tokens": 1}
+            raise ConnectionError("boom")
+    rows = run_corpus(cp, HalfBad())
+    assert len(rows) == 2
+    assert rows[0]["text"] == "ok"
+    assert rows[1]["text"] == "" and "boom" in rows[1]["error"]
+
+
+def test_build_corpus(tmp_path=None):
+    import tempfile
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "tools"))
+    import build_corpus
+    d = tempfile.mkdtemp()
+    log = os.path.join(d, "logs.jsonl")
+    with open(log, "w") as f:
+        f.write(json.dumps({"messages": [{"role": "user",
+                "content": "key is sk-abcdefghij0123456789 use it"}]}) + "\n")
+        f.write(json.dumps({"messages": [{"role": "user",
+                "content": "key is sk-abcdefghij0123456789 use it"}]}) + "\n")  # dup
+        f.write(json.dumps({"request": {"messages": [
+                {"role": "user", "content": "wrapped"}]}}) + "\n")
+        f.write("not json\n")
+    rows = build_corpus.build(log, 100)
+    assert len(rows) == 2                      # dedupe + junk skipped
+    assert "sk-" not in json.dumps(rows)       # secret redacted
+    assert any(r.get("messages") and r["messages"][0]["content"] == "wrapped"
+               for r in rows)                  # wrapper unwrapped
+    assert build_corpus.build(log, 100) == rows  # deterministic (same corpus hash)
+
+
 def test_corpus_selftest():
     path = os.path.join(os.path.dirname(__file__), "..", "corpora", "prod100.jsonl")
     if not os.path.exists(path):

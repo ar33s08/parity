@@ -22,7 +22,9 @@ class Endpoint:
         self.name = name or model
 
     def complete(self, prompt, max_tokens=400):
-        payload = {"model": self.model, "messages": [{"role": "user", "content": prompt}],
+        messages = prompt if isinstance(prompt, list) else [
+            {"role": "user", "content": prompt}]
+        payload = {"model": self.model, "messages": messages,
                    "max_tokens": max_tokens, "temperature": 0.0}
         req = urllib.request.Request(self.base_url + "/chat/completions",
                                      data=json.dumps(payload).encode(),
@@ -43,14 +45,21 @@ class Endpoint:
 
 
 def run_corpus(path, endpoint):
-    """Returns list of {idx, prompt, output, seconds, tokens}."""
+    """Returns list of {idx, prompt, output, seconds, tokens}.
+    A transport error on one item is recorded as an errored row (empty text ->
+    fails its rubric honestly) instead of killing the run."""
     rows = []
     with open(path) as f:
         for i, line in enumerate(f):
             if not line.strip():
                 continue
             rec = json.loads(line)
-            out = endpoint.complete(rec["prompt"])
+            prompt = rec.get("messages", rec.get("prompt"))
+            try:
+                out = endpoint.complete(prompt)
+            except Exception as e:  # noqa: BLE001 - gate must survive bad items
+                out = {"text": "", "seconds": 0.0, "prompt_tokens": 0,
+                       "completion_tokens": 0, "error": str(e)[:200]}
             rows.append({"idx": i, "id": rec.get("id", "p%04d" % i),
-                         "prompt": rec["prompt"], **out})
+                         "prompt": rec.get("prompt", prompt), **out})
     return rows
